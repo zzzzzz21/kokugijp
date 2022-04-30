@@ -1,0 +1,17 @@
+{
+  "default": {
+    "title": "default title",
+    "description": "default description",
+    "canonical": "http://example.com/"
+  },
+
+  "home": {
+    "title": "TOP | ",
+    "description": "NEWS。"
+  },
+
+  "news": {
+    "title": "NEWS | ",
+    "description": "NEWS。"
+  }
+}
