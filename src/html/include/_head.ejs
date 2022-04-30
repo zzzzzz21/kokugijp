@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>国土技建株式会社</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="ja">
+<meta name="keywords" content="国土技建株式会社,国土技建　広島,公共工事全般,道路関連工事,交通安全施設工事">
+<meta name="description" content="人に優しい地域づくりの実現を目指して――私たちは高品質の安心・安全を創るプロフェッショナルです">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/privacy.css" media="all">
+<!-- ink rel="stylesheet" type="text/css" href="css/sp.css" media="all" media="all and (max-width:480px)" -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var li_1 = "";    
+    $('.ul_open_v').append(li_1);
+    $('.ul_open_h').append(li_1);
+
+    $('.btn-1').click(function () {
+        $('.open-1').toggleClass('active');
+        $(this).toggleClass('on');
+        $(this).toggleClass('move-1');
+    });
+
+    $('.btn-2').click(function () {
+        $('.open-2').toggleClass('active');
+        $(this).toggleClass('on');
+        $(this).toggleClass('move-2');
+    });
+//ハンバーガー
+      $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+ 
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+
+});
+</script>
+
+</head>

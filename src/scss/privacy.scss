@@ -1,0 +1,131 @@
+// ********************************************************************************************
+//
+// privacy.scss
+//
+// ********************************************************************************************
+@charset "utf-8";
+
+.c-title {
+  background: #00ACA8;
+  padding: 55px 0 48px;
+  text-align: center;
+}
+
+.c-button-top {
+  align-items: center;
+  border: 1px solid #D7D7CD;
+  color: #646464 !important;
+  display: block;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 15px 0 4px;
+  position: relative;
+  text-align: center;
+  width: 110px;
+
+  &::before,
+  &::after {
+    border-style: solid;
+    border-width: 0 6px 8px 6px;
+    content: "";
+    height: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 0;
+  }
+
+  &::before {
+    border-color: transparent transparent #646464 transparent;
+    top: 6px;
+  }
+
+  &::after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+}
+
+.p-privacy {
+  padding: 52px 0 10px;
+  text-align: left;
+}
+
+.p-privacy-dl {
+  margin-bottom: 85px;
+}
+
+.p-privacy-dt {
+  background: #F1F1F1;
+  color: #7E7E74;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  margin-top: 41px;
+  padding: .4em 1em;
+
+  &.is-border {
+    background: transparent;
+    border: 1px solid #00ACA8;
+  }
+
+  &.is-transparent {
+    background: transparent;
+    border: 1px solid #EAEAE5;
+  }
+}
+
+.p-privacy-dd {
+  font-size: 14px;
+  line-height: 2.1;
+  padding: 20px;
+}
+
+.p-privacy-block {
+  margin-top: 20px;
+}
+
+
+
+@media only screen and (max-width:480px) {
+  .c-title {
+    padding: 32px 0 30px;
+  }
+
+  .c-button-top {
+    font-size: 15px;
+    padding: 23px 0 0;
+  
+    &::before,
+    &::after {
+      border-width: 0 7.5px 10px 7.5px;
+    }
+  
+    &::before {
+      top: 6px;
+    }
+  
+    &::after {
+      top: 7px;
+    }
+  }
+
+  .p-privacy {
+    padding: 0 0 10px;
+  }
+
+  .p-privacy-dl {
+    margin-bottom: 20px;
+  }
+
+  .p-privacy-dt {
+    font-size: 23px;
+    margin-top: 20px;
+    padding: .4em .5em;
+  }
+
+  .p-privacy-dd {
+    padding: 20px 0;
+  }
+}
