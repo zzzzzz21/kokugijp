@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.page_top,
+.index_left_td,
+.navi,
+.page_bottom,
+.accessBtn
+{display:none;}
+.main_table{width:100%;margin:0;}
+
+.page_title h1{width:100%;margin:0 auto 20px;padding:0 0 12px;border-bottom:solid 1px #ccc;font-size:200%;font-weight:bold;}
+
+.access table{width:100%;margin:20px 0;}
+.access iframe{width:100%;margin:0 0 20px;}
+
+.access .accessBox{display:none;width:40%;}
+.access .accessRail{display:none;margin:0;}
+.access .accessCar{display:none;float:right;margin:0;}
+
+.access .print{display:block !important;width:100%;}
+.access .print td{width:50% !important;vertical-align:top;}
+.access .print td:nth-of-type(1){padding:0 10px 0 0;}
+.access .print td:nth-of-type(2){padding:0 0 0 10px;}
+.access .print div{padding:20px;border:solid 1px #ccc;font-size:114%;}
+.access .print div p:nth-of-type(1){margin:0 0 10px;padding:0 0 10px;border-bottom:solid 1px #ccc;font-weight:bold;}
+
+
