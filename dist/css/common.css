@@ -85,18 +85,20 @@ height:70px;
 }
 .innerHeader h1{float:left;width:256px;height:43px;}
 
-.gNavi{float:right;width:500px;height:32px;}
-.gNavi ul{width:500px;height:32px;display:flex;}
+.gNavi{float:right;width:618px;height:32px;}
+.gNavi ul{width:618px;height:32px;display:flex;}
 .gNavi ul li{height:32px;margin:0 0 0 68px;}
 .gNavi ul li a{display:inline-block;height:32px;}
 .gNavi ul li a{text-indent:-10000px;}
 .gNavi ul .gnavi01 a{width:96px;background:url("../img/gnavi_01.png")0 0 no-repeat;}
 .gNavi ul .gnavi02 a{width:79px;background:url("../img/gnavi_02.png")0 0 no-repeat;}
 .gNavi ul .gnavi03 a{width:72px;background:url("../img/gnavi_03.png")0 0 no-repeat;}
+.gNavi ul .gnavi04 a{width:99px;background:url("../img/gnavi_04.png")0 0 no-repeat;}
 
 .gNavi ul .gnavi01 a:hover{width:96px;background:url("../img/gnavi_01_on.png")0 0 no-repeat;}
 .gNavi ul .gnavi02 a:hover{width:79px;background:url("../img/gnavi_02_on.png")0 0 no-repeat;}
 .gNavi ul .gnavi03 a:hover{width:72px;background:url("../img/gnavi_03_on.png")0 0 no-repeat;}
+.gNavi ul .gnavi04 a:hover{width:99px;background:url("../img/gnavi_04_on.png")0 0 no-repeat;}
 
 /*.gNavi ul li a:hover{filter:alpha(opacity=60);opacity:0.6;color:#333;text-decoration:none;}*/
 
@@ -601,5 +603,11 @@ clearfix
 .clearfix { display: block; }
 /* End hide from IE-mac */
 
+.top-privacy {
+  margin-top: 20px;
+}
 
 
+.top-privacy a {
+  color: #333 !important;
+}
