@@ -3,6 +3,11 @@
   padding: 55px 0 48px;
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .c-title {
+    padding: 32px 0 30px;
+  }
+}
 
 .c-button-top {
   align-items: center;
@@ -16,6 +21,12 @@
   text-align: center;
   width: 110px;
 }
+@media screen and (max-width: 480px) {
+  .c-button-top {
+    font-size: 15px;
+    padding: 23px 0 0;
+  }
+}
 .c-button-top::before, .c-button-top::after {
   border-style: solid;
   border-width: 0 6px 8px 6px;
@@ -26,6 +37,11 @@
   position: absolute;
   right: 0;
   width: 0;
+}
+@media screen and (max-width: 480px) {
+  .c-button-top::before, .c-button-top::after {
+    border-width: 0 7.5px 10px 7.5px;
+  }
 }
 .c-button-top::before {
   border-color: transparent transparent #646464 transparent;
@@ -40,9 +56,19 @@
   padding: 52px 0 10px;
   text-align: left;
 }
+@media screen and (max-width: 480px) {
+  .p-privacy {
+    padding: 0 0 10px;
+  }
+}
 
 .p-privacy-dl {
   margin-bottom: 85px;
+}
+@media screen and (max-width: 480px) {
+  .p-privacy-dl {
+    margin-bottom: 20px;
+  }
 }
 
 .p-privacy-dt {
@@ -53,6 +79,13 @@
   letter-spacing: 0.1em;
   margin-top: 41px;
   padding: 0.4em 1em;
+}
+@media screen and (max-width: 480px) {
+  .p-privacy-dt {
+    font-size: 23px;
+    margin-top: 20px;
+    padding: 0.4em 0.5em;
+  }
 }
 .p-privacy-dt.is-border {
   background: transparent;
@@ -68,45 +101,463 @@
   line-height: 2.1;
   padding: 20px;
 }
+@media screen and (max-width: 480px) {
+  .p-privacy-dd {
+    padding: 20px 0;
+  }
+}
 
 .p-privacy-block {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 480px) {
-  .c-title {
-    padding: 32px 0 30px;
+.l-full {
+  background-image: url(../img/contact_kv.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 270px;
+  padding: 24px 0 0;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .l-full {
+    background-image: url(../img/contact_kv_sp.jpg);
+    background-size: 100% 170px;
   }
+}
 
-  .c-button-top {
+.l-full-title {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 5px;
+}
+@media screen and (max-width: 480px) {
+  .l-full-title {
+    max-width: 100%;
+  }
+}
+
+.p-contact {
+  background: #FFF;
+  margin: 135px auto 0;
+  max-width: 980px;
+  padding: 40px 50px 150px;
+}
+@media screen and (min-width: 481px) {
+  .p-contact {
+    border-radius: 10px;
+    min-height: 70vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .p-contact {
+    padding: 20px 10px 95px;
+  }
+}
+
+.p-contact-title {
+  color: #00ACA8;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 481px) {
+  .p-contact-lead {
     font-size: 15px;
-    padding: 23px 0 0;
-  }
-  .c-button-top::before, .c-button-top::after {
-    border-width: 0 7.5px 10px 7.5px;
-  }
-  .c-button-top::before {
-    top: 6px;
-  }
-  .c-button-top::after {
-    top: 7px;
-  }
-
-  .p-privacy {
-    padding: 0 0 10px;
-  }
-
-  .p-privacy-dl {
-    margin-bottom: 20px;
-  }
-
-  .p-privacy-dt {
-    font-size: 23px;
+    letter-spacing: 0.03em;
     margin-top: 20px;
-    padding: 0.4em 0.5em;
   }
+}
+@media screen and (max-width: 480px) {
+  .p-contact-lead {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+    margin-top: 20px;
+  }
+}
 
-  .p-privacy-dd {
-    padding: 20px 0;
+.p-contact-content {
+  margin-top: 45px;
+}
+@media screen and (max-width: 480px) {
+  .p-contact-content {
+    margin-top: 20px;
+  }
+}
+
+.c-input-block {
+  border-top: 1px solid #DCDCD2;
+  padding: 14px 0;
+}
+.c-input-block:last-child {
+  border-bottom: 1px solid #DCDCD2;
+}
+@media screen and (min-width: 481px) {
+  .c-input-block {
+    align-items: center;
+    display: flex;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-block {
+    padding: 12px 0;
+  }
+}
+
+.c-input-block-bar {
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+.c-input-head {
+  align-items: center;
+  display: flex;
+  min-height: 32px;
+  position: relative;
+}
+@media screen and (min-width: 481px) {
+  .c-input-head {
+    flex: 1;
+    max-width: 324px;
+    padding-left: 64px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-head {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .c-input-name {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-name {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+}
+
+.c-input-label {
+  border: 1px solid #FF0000;
+  color: #FF0000;
+  font-size: 12px;
+  left: 0;
+  margin-right: 15px;
+  min-width: 40px;
+  position: absolute;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .c-input-label {
+    font-size: 14px;
+    margin-right: 30px;
+    min-width: 45px;
+    position: static;
+  }
+}
+
+.c-input-content {
+  flex: 1;
+}
+@media screen and (min-width: 481px) {
+  .c-input-content {
+    margin-left: 10px;
+    min-height: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-content.is-nowrap {
+    display: flex;
+  }
+}
+
+.c-input-content-confirm {
+  display: flex;
+  padding-top: 5px;
+}
+
+.c-input-error {
+  color: red;
+  margin-top: 0;
+  width: 100%;
+}
+
+.c-input-text,
+.c-input-area {
+  background: #EAF3FA;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .c-input-text,
+.c-input-area {
+    padding-left: 20px;
+  }
+}
+.c-input-text::-webkit-input-placeholder, .c-input-area::-webkit-input-placeholder {
+  color: gray;
+}
+.c-input-text::-moz-placeholder, .c-input-area::-moz-placeholder {
+  color: gray;
+}
+.c-input-text:-ms-input-placeholder, .c-input-area:-ms-input-placeholder {
+  color: gray;
+}
+.c-input-text::-ms-input-placeholder, .c-input-area::-ms-input-placeholder {
+  color: gray;
+}
+.c-input-text::placeholder,
+.c-input-area::placeholder {
+  color: gray;
+}
+
+.c-input-text {
+  min-height: 32px;
+}
+.c-input-text[readonly=readonly] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  padding-left: 0;
+}
+@media screen and (max-width: 480px) {
+  .c-input-text {
+    min-height: 40px;
+  }
+}
+.c-input-text.is-postal-code {
+  width: 95px;
+}
+@media screen and (max-width: 480px) {
+  .c-input-text.is-postal-code {
+    width: 108px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .c-input-text.is-number {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-text.is-year {
+    width: 102px;
+  }
+}
+.c-input-text.is-day {
+  width: 55px;
+}
+@media screen and (max-width: 480px) {
+  .c-input-text.is-day {
+    width: 52px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-text.is-tel1 {
+    width: 62px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-text.is-tel2 {
+    width: 87px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-text.is-tel3 {
+    width: 97px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .c-input-area {
+    min-height: 138px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-area {
+    min-height: 134px;
+  }
+}
+
+.c-input-birthday {
+  align-items: center;
+  display: inline-flex;
+}
+.c-input-birthday:nth-of-type(n+2) {
+  margin-left: 24px;
+}
+@media screen and (max-width: 480px) {
+  .c-input-birthday:nth-of-type(n+2) {
+    margin-left: 12px;
+  }
+}
+
+.c-input-birthday-divide {
+  padding-left: 10px;
+}
+
+.c-input-post {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-input-post-mark {
+  margin-right: 10px;
+}
+
+.c-input-post-number {
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (min-width: 481px) {
+  .c-input-address {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-address {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .c-input-phone {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.c-input-check {
+  overflow: hidden;
+}
+@media screen and (min-width: 481px) {
+  .c-input-check {
+    height: 18px;
+    width: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-input-check {
+    height: 21px;
+    width: 21px;
+  }
+}
+
+.p-contact-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.p-contact-submit *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.p-contact-message {
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 60px;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .p-contact-message {
+    font-size: 16px;
+    line-height: 2.2;
+    margin-top: 50px;
+  }
+}
+
+.p-contact-check {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 390px;
+}
+@media screen and (min-width: 481px) {
+  .p-contact-check {
+    margin: 18px auto 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .p-contact-check {
+    margin-top: 20px;
+  }
+}
+
+.p-contact-check-label {
+  margin-left: 10px;
+  order: 2;
+}
+@media screen and (max-width: 480px) {
+  .p-contact-check-label {
+    font-size: 19px;
+  }
+}
+
+.p-contact-check-input {
+  order: 1;
+}
+.p-contact-check-input:not(:checked) + .p-contact-check-button {
+  cursor: default;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.p-contact-check-button {
+  margin-top: 40px;
+  order: 3;
+}
+@media screen and (max-width: 480px) {
+  .p-contact-check-button {
+    margin-top: 80px;
+  }
+}
+
+.c-secondary-button {
+  align-items: center;
+  background: #FFAC25;
+  border: none;
+  border-radius: 5px;
+  color: #FFF !important;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 21px;
+  font-weight: bold;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  min-height: 71px;
+  padding: 5px;
+  transition: opacity 0.5s;
+}
+.c-secondary-button:hover {
+  opacity: 0.8;
+  text-decoration: none !important;
+}
+.c-secondary-button.is-border {
+  background: #fff;
+  border: 1px solid #FFAC25;
+  color: #FFAC25 !important;
+}
+@media screen and (min-width: 481px) {
+  .c-secondary-button {
+    min-width: 390px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-secondary-button {
+    font-size: 30px;
+    font-weight: normal;
+    min-height: 100px;
+    width: 100%;
   }
 }

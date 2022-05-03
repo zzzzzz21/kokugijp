@@ -5,10 +5,29 @@
 // ********************************************************************************************
 @charset "utf-8";
 
+@mixin sp {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin pc {
+	@media screen and (min-width: 481px) {
+		@content;
+	}
+}
+
+$form-item-height: 32px;
+
+// プライバシー
 .c-title {
   background: #00ACA8;
   padding: 55px 0 48px;
   text-align: center;
+
+  @include sp {
+    padding: 32px 0 30px;
+  }
 }
 
 .c-button-top {
@@ -23,6 +42,11 @@
   text-align: center;
   width: 110px;
 
+  @include sp {
+    font-size: 15px;
+    padding: 23px 0 0;
+  }
+
   &::before,
   &::after {
     border-style: solid;
@@ -34,6 +58,10 @@
     position: absolute;
     right: 0;
     width: 0;
+
+    @include sp {
+      border-width: 0 7.5px 10px 7.5px;
+    }
   }
 
   &::before {
@@ -50,10 +78,18 @@
 .p-privacy {
   padding: 52px 0 10px;
   text-align: left;
+
+  @include sp {
+    padding: 0 0 10px;
+  }
 }
 
 .p-privacy-dl {
   margin-bottom: 85px;
+
+  @include sp {
+    margin-bottom: 20px;
+  }
 }
 
 .p-privacy-dt {
@@ -64,6 +100,12 @@
   letter-spacing: .1em;
   margin-top: 41px;
   padding: .4em 1em;
+
+  @include sp {
+    font-size: 23px;
+    margin-top: 20px;
+    padding: .4em .5em;
+  }
 
   &.is-border {
     background: transparent;
@@ -80,52 +122,441 @@
   font-size: 14px;
   line-height: 2.1;
   padding: 20px;
+
+  @include sp {
+    padding: 20px 0;
+  }
 }
 
 .p-privacy-block {
   margin-top: 20px;
 }
 
+// 問い合わせ
+.l-full {
+  background-image: url(../img/contact_kv.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 270px;
+  padding: 24px 0 0;
+  width: 100%;
 
-
-@media only screen and (max-width:480px) {
-  .c-title {
-    padding: 32px 0 30px;
+  @include sp {
+    background-image: url(../img/contact_kv_sp.jpg);
+    background-size: 100% 170px;
   }
 
-  .c-button-top {
-    font-size: 15px;
-    padding: 23px 0 0;
-  
-    &::before,
-    &::after {
-      border-width: 0 7.5px 10px 7.5px;
-    }
-  
-    &::before {
-      top: 6px;
-    }
-  
-    &::after {
-      top: 7px;
-    }
+
+}
+
+.l-full-title {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 5px;
+
+  @include sp {
+    max-width: 100%;
   }
 
-  .p-privacy {
-    padding: 0 0 10px;
+}
+
+.p-contact {
+  background: #FFF;
+  margin: 135px auto 0;
+  max-width: 980px;
+  padding: 40px 50px 150px;
+
+  @include pc {
+    border-radius: 10px;
+    min-height: 70vh;
   }
 
-  .p-privacy-dl {
-    margin-bottom: 20px;
+  @include sp {
+    padding: 20px 10px 95px;
   }
+}
 
-  .p-privacy-dt {
-    font-size: 23px;
+.p-contact-title {
+  color: #00ACA8;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: .1em;
+
+}
+
+.p-contact-lead {
+	@include pc {
+		font-size: 15px;
+    letter-spacing: .03em;
     margin-top: 20px;
-    padding: .4em .5em;
+	}
+
+	@include sp {
+		font-size: 14px;
+    letter-spacing: .1em;
+		line-height: 1.7;
+    margin-top: 20px;
+	}
+}
+
+.p-contact-content {
+  margin-top: 45px;
+
+  @include sp {
+    margin-top: 20px;
+	}
+}
+
+.c-input-block {
+  border-top: 1px solid #DCDCD2;
+  padding: 14px 0;
+
+  &:last-child {
+    border-bottom: 1px solid #DCDCD2;
   }
 
-  .p-privacy-dd {
-    padding: 20px 0;
+	@include pc {
+		align-items: center;
+		display: flex;
+	}
+
+  @include sp {
+    padding: 12px 0;
+	}
+}
+
+.c-input-block-bar {
+  font-size: 14px;
+  margin: 0 4px;
+}
+
+.c-input-head {
+	align-items: center;
+	display: flex;
+	min-height: $form-item-height;
+  position: relative;
+
+	@include pc {
+    flex: 1;
+		max-width: 324px;
+    padding-left: 64px;
+	}
+
+	@include sp {
+		margin-bottom: 5px;
+	}
+}
+
+.c-input-name {
+	@include pc {
+		font-size: 14px;
+	}
+
+	@include sp {
+		font-weight: bold;
+		letter-spacing: 0.1em;
+	}
+}
+
+.c-input-label {
+	border: 1px solid #FF0000;
+  color: #FF0000;
+	font-size: 12px;
+  left: 0;
+  margin-right: 15px;
+	min-width: 40px;
+  position: absolute;
+	text-align: center;
+
+  @include sp {
+    font-size: 14px;
+    margin-right: 30px;
+    min-width: 45px;
+    position: static;
+	}
+}
+
+.c-input-content {
+	flex: 1;
+
+	@include pc {
+		margin-left: 10px;
+		min-height: $form-item-height;
+	}
+
+  &.is-nowrap {
+    @include sp {
+      display: flex;
+    }
   }
+}
+
+.c-input-content-confirm {
+	display: flex;
+	padding-top: 5px;
+}
+
+.c-input-error {
+	color: red;
+	margin-top: 0;
+	width: 100%;
+}
+
+.c-input-text,
+.c-input-area {
+  background: #EAF3FA;
+	border: none;
+  border-radius: 5px;
+  font-size: 16px;
+	padding: 5px 10px;
+	width: 100%;
+
+	@include sp {
+		padding-left: 20px;
+	}
+
+	&::placeholder {
+		color: gray;
+	}
+}
+
+.c-input-text {
+	min-height: $form-item-height;
+
+  &[readonly="readonly"] {
+		appearance: none;
+		background: transparent;
+		padding-left: 0;
+  }
+
+  @include sp {
+    min-height: 40px;
+  }
+
+  &.is-postal-code {
+    width: 95px;
+
+    @include sp {
+      width: 108px;
+    }
+  }
+
+  &.is-number {
+    @include pc {
+      width: 120px;
+    }
+  }
+
+  &.is-year {
+    @include sp {
+      width: 102px;
+    }
+  }
+
+  &.is-day {
+    width: 55px;
+    @include sp {
+      width: 52px;
+    }
+  }
+
+  &.is-tel1 {
+    @include sp {
+      width: 62px;
+    }
+  }
+
+  &.is-tel2 {
+    @include sp {
+      width: 87px;
+    }
+  }
+
+  &.is-tel3 {
+    @include sp {
+      width: 97px;
+    }
+  }
+}
+
+.c-input-area {
+	@include pc {
+		min-height: 138px;
+	}
+
+	@include sp {
+		min-height: 134px;
+	}
+}
+
+.c-input-birthday {
+  align-items: center;
+  display: inline-flex;
+  &:nth-of-type(n+2) {
+    margin-left: 24px;
+
+    @include sp {
+      margin-left: 12px;
+    }
+  }
+}
+
+.c-input-birthday-divide {
+  padding-left: 10px;
+}
+
+.c-input-post {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.c-input-post-mark {
+  margin-right: 10px;
+}
+
+.c-input-post-number {
+  align-items: center;
+  display: flex;
+}
+
+.c-input-address {
+	@include pc {
+		margin-top: 10px;
+	}
+
+	@include sp {
+		margin-top: 15px;
+	}
+}
+
+.c-input-phone {
+  @include sp {
+    align-items: center;
+    display: flex;
+	}
+}
+
+.c-input-check {
+	overflow: hidden;
+
+	@include pc {
+		height: 18px;
+		width: 18px;
+	}
+
+	@include sp {
+		height: 21px;
+		width: 21px;
+	}
+}
+
+.p-contact-submit {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+
+	& * {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.p-contact-message {
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 60px;
+  text-align: center;
+
+  @include sp {
+    font-size: 16px;
+    line-height: 2.2;
+    margin-top: 50px;
+	}
+}
+
+.p-contact-check {
+  align-items: center;
+	display: flex;
+  flex-wrap: wrap;
+	justify-content: center;
+  max-width: 390px;
+
+	@include pc {
+		margin: 18px auto 0;
+	}
+
+	@include sp {
+		margin-top: 20px;
+	}
+}
+
+.p-contact-check-label {
+  margin-left: 10px;
+  order: 2;
+
+  @include sp {
+		font-size: 19px;
+	}
+}
+
+.p-contact-check-input {
+  order: 1;
+
+  &:not(:checked) {
+    & + .p-contact-check-button {
+      cursor: default;
+      opacity: .3;
+      pointer-events: none;
+    }
+  }
+}
+
+.p-contact-check-button {
+  margin-top: 40px;
+  order: 3;
+
+  @include sp {
+    margin-top: 80px;
+	}
+}
+
+.c-secondary-button {
+	align-items: center;
+	background: #FFAC25;
+  border: none;
+	border-radius: 5px;
+	color: #FFF !important;
+  cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	font-size: 21px;
+	font-weight: bold;
+	justify-content: center;
+	letter-spacing: 0.05em;
+	min-height: 71px;
+	padding: 5px;
+  transition: opacity .5s;
+
+  &:hover {
+    opacity: .8;
+    text-decoration: none !important;
+  }
+
+  &.is-border {
+    background: #fff;
+    border: 1px solid #FFAC25;
+    color: #FFAC25 !important;
+  }
+
+	@include pc {
+		min-width: 390px;
+	}
+
+	@include sp {
+    font-size: 30px;
+    font-weight: normal;
+    min-height: 100px;
+		width: 100%;
+	}
 }
