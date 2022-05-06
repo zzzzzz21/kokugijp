@@ -55,7 +55,9 @@ $post = (isset($_SESSION['post']) ? $_SESSION['post'] : '');
               <span class="c-input-name">お名前（ふりがな）</span>
             </label>
             <div class="c-input-content">
-              <input class="c-input-text" id="form-kana" type="text" name="kana" required>
+              <input class="c-input-text" id="form-kana" type="text" name="kana" pattern="(?=.*?[\u3041-\u309F])[\u3041-\u309F\s]*" required
+                     oninvalid="setCustomValidity('ひらがな、全角・半角スペースで入力してください。')"
+                     oninput="setCustomValidity('')">
             </div>
           </div>
           <div class="c-input-block">
