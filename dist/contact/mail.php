@@ -33,14 +33,14 @@ function send($input) {
     $params = '-f ' . INQUIRY_EMAIL_RETURN;
     mb_language("Japanese");
     mb_internal_encoding("UTF-8");
-    mb_send_mail($input['email'], '【国土技建株式会社】へのお問い合わせありがとうございました。', getBody($input), $headers, $params);
+    mb_send_mail($input['email'], '【国土技建株式会社】へ採用お問い合わせありがとうございました。', getBody($input), $headers, $params);
 
     // 管理者宛
     $headers = 'From: ' . INQUIRY_EMAIL_FROM;
     $params = '-f ' . $input['email'];
     mb_language("Japanese");
     mb_internal_encoding("UTF-8");
-    mb_send_mail(INQUIRY_EMAIL_ADMIN, 'お問い合わせを受信しました。｜国土技建株式会社', getBodyAdmin($input), $headers, $params);
+    mb_send_mail(INQUIRY_EMAIL_ADMIN, '採用お問い合わせを受信しました。｜国土技建株式会社', getBodyAdmin($input), $headers, $params);
 }
 
 function getBody($input) {
@@ -53,7 +53,7 @@ function getBody($input) {
 
 {$input['name']} 様
 
-国土技建お問い合わせフォームから、
+国土技建 採用お問い合わせフォームから、
 下記の内容でお問い合わせを受け付けました。
 内容を確認して担当者から回答しますので、しばらくお待ちください。
 
@@ -85,7 +85,7 @@ EOM;
 
 function getBodyAdmin($input) {
     return <<< EOM
-下記の内容でお問い合わせがありました。
+下記の内容で採用お問い合わせがありました。
 内容を確認して、原則として3営業日以内に、回答してください。
 
 ---
