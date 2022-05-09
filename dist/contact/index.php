@@ -67,15 +67,15 @@ $post = (isset($_SESSION['post']) ? $_SESSION['post'] : '');
             </label>
             <div class="c-input-content is-nowrap">
               <div class="c-input-birthday">
-                <input class="c-input-text is-number is-year" id="form-year" type="text" name="bday_year" autocomplete="bday_year" placeholder="1970" size="4" maxlength="4" required>
+                <input class="c-input-text is-number is-year" id="form-year" type="number" name="bday_year" autocomplete="bday_year" placeholder="1970" size="4" maxlength="4" required>
                 <span class="c-input-birthday-divide">年</span>
               </div>
               <div class="c-input-birthday">
-                <input class="c-input-text is-day" id="form-month" type="text" name="bday_month" autocomplete="bday_month" placeholder="1" maxlength="2" required>
+                <input class="c-input-text is-day" id="form-month" type="number" name="bday_month" autocomplete="bday_month" placeholder="1" maxlength="2" required>
                 <span class="c-input-birthday-divide">月</span>
               </div>
               <div class="c-input-birthday">
-                <input class="c-input-text is-day" id="form-day" type="text" name="bday_day" autocomplete="bday_day" placeholder="1" maxlength="2" required>
+                <input class="c-input-text is-day" id="form-day" type="number" name="bday_day" autocomplete="bday_day" placeholder="1" maxlength="2" required>
                 <span class="c-input-birthday-divide">日</span>
               </div>
             </div>
@@ -89,11 +89,11 @@ $post = (isset($_SESSION['post']) ? $_SESSION['post'] : '');
               <div class="c-input-post">
                 <span class="c-input-post-mark">〒</span>
                 <span class="c-input-post-number">
-                    <input type="text" class="c-input-text is-postal-code p-postal-code" name="postal_code1" placeholder="000" size="3" maxlength="3" required>
+                    <input type="number" class="c-input-text is-postal-code p-postal-code" name="postal_code1" placeholder="000" size="3" maxlength="3" required>
                     <span class="c-input-block-bar">－</span>
                   </span>
                 <span class="c-input-post-number">
-                    <input type="text" class="c-input-text is-postal-code p-postal-code" name="postal_code2" placeholder="0000" size="4" maxlength="4" required>
+                    <input type="number" class="c-input-text is-postal-code p-postal-code" name="postal_code2" placeholder="0000" size="4" maxlength="4" required>
                   </span>
               </div>
               <div class="c-input-address">
@@ -108,11 +108,11 @@ $post = (isset($_SESSION['post']) ? $_SESSION['post'] : '');
             </label>
             <div class="c-input-content">
               <div class="c-input-phone">
-                <input class="c-input-text is-number is-tel1" id="form-tel1" type="text" name="tel1"  maxlength="4" required>
+                <input class="c-input-text is-number is-tel1" id="form-tel1" type="tel" name="tel1"  maxlength="4" required>
                 <span class="c-input-block-bar">－</span>
-                <input class="c-input-text is-number is-tel2" id="form-tel2" type="text" name="tel2"  maxlength="4" required>
+                <input class="c-input-text is-number is-tel2" id="form-tel2" type="tel" name="tel2"  maxlength="4" required>
                 <span class="c-input-block-bar">－</span>
-                <input class="c-input-text is-number is-tel3" id="form-tel3" type="text" name="tel3"  maxlength="4" required>
+                <input class="c-input-text is-number is-tel3" id="form-tel3" type="tel" name="tel3"  maxlength="4" required>
               </div>
             </div>
           </div>
@@ -122,11 +122,11 @@ $post = (isset($_SESSION['post']) ? $_SESSION['post'] : '');
             </label>
             <div class="c-input-content">
               <div class="c-input-phone">
-                <input class="c-input-text is-number is-tel1" id="form-fax1" type="text" name="fax1" maxlength="4">
+                <input class="c-input-text is-number is-tel1" id="form-fax1" type="number" name="fax1" maxlength="4">
                 <span class="c-input-block-bar">－</span>
-                <input class="c-input-text is-number is-tel2" id="form-fax2" type="text" name="fax2" maxlength="4">
+                <input class="c-input-text is-number is-tel2" id="form-fax2" type="number" name="fax2" maxlength="4">
                 <span class="c-input-block-bar">－</span>
-                <input class="c-input-text is-number is-tel3" id="form-fax3" type="text" name="fax3" maxlength="4">
+                <input class="c-input-text is-number is-tel3" id="form-fax3" type="number" name="fax3" maxlength="4">
               </div>
             </div>
           </div>
