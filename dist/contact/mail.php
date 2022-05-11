@@ -15,9 +15,9 @@ $form = $_SESSION['post'];
 
 /*******************************************************/
 /* 問合せ処理メールアドレス */
-define('INQUIRY_EMAIL_ADMIN', 'dev@cotolog.jp'); // ADMIN
-define('INQUIRY_EMAIL_FROM', 'noreply@kokugi.jp'); // 送り主
-define('INQUIRY_EMAIL_RETURN', 'info@kokugi.jp'); // Return-Path
+define('INQUIRY_EMAIL_ADMIN', 'info@hakarai.co.jp'); // ADMIN
+define('INQUIRY_EMAIL_FROM', 'shimizu@hakarai.co.jp'); // 送り主
+define('INQUIRY_EMAIL_RETURN', 'shimizu@hakarai.co.jp'); // Return-Path
 /*******************************************************/
 
 if ($_SESSION['res']['isSuccess'] === true) {
@@ -40,7 +40,7 @@ function send($input) {
     $params = '-f ' . $input['email'];
     mb_language("Japanese");
     mb_internal_encoding("UTF-8");
-    mb_send_mail(INQUIRY_EMAIL_ADMIN, '採用お問い合わせを受信しました。｜国土技建株式会社', getBodyAdmin($input), $headers, $params);
+	mb_send_mail(INQUIRY_EMAIL_ADMIN, '【国土技建株式会社】採用お問い合わせがありました', getBodyAdmin($input), $headers, $params);
 }
 
 function getBody($input) {
@@ -53,30 +53,34 @@ function getBody($input) {
 
 {$input['name']} 様
 
-国土技建 採用お問い合わせフォームから、
+国土技建株式会社の採用お問い合わせフォームから、
 下記の内容でお問い合わせを受け付けました。
 内容を確認して担当者から回答しますので、しばらくお待ちください。
 
----
-お名前（漢字）： {$input['name']}
-お名前（ふりがな）： {$input['kana']}
+-------------------------------------------------------------
+お名前： {$input['name']}
+ふりがな： {$input['kana']}
 生年月日： {$input['bday_year']}年{$input['bday_month']}月{$input['bday_day']}日
-住所： {$input['postal_code1']}-{$input['postal_code2']}
-　　　 {$input['address_level1']}
 TEL： {$input['tel1']}-{$input['tel2']}-{$input['tel3']}
 FAX： {$input['fax1']}-{$input['fax2']}-{$input['fax3']}
 メールアドレス： {$input['email']}
+住所： {$input['postal_code1']}-{$input['postal_code2']}
+　　　 {$input['address_level1']}
 ご質問など： {$input['other_content']}
----
-
+-------------------------------------------------------------
 
 原則として３営業日以内に、担当者よりご連絡いたします。
-
+採用に際して、ご不明点等ありましたら以下のご連絡先までお問い合わせくださいませ。
 よろしくお願いいたします。
 
 ================================
 国土技建株式会社
 http://kokugi.jp/
+
+人事部
+担当：（※担当者名）
+TEL ：082-422-4492　FAX 082-422-7730
+MAIL ：honsya@kokugi.jp
 ================================
 
 
@@ -85,22 +89,22 @@ EOM;
 
 function getBodyAdmin($input) {
     return <<< EOM
-下記の内容で採用お問い合わせがありました。
+下記の内容でお問い合わせがありました。
 内容を確認して、原則として3営業日以内に、回答してください。
 
----
-お名前（漢字）： {$input['name']}
-お名前（ふりがな）： {$input['kana']}
-生年月日： {$input['bday_year']}年{$input['bday_month']}月{$input['bday_day']}日
-住所： {$input['postal_code1']}-{$input['postal_code2']}
+応募内容 ----------------------------------------------------------------
+【お名前】 {$input['name']}
+【ふりがな】 {$input['kana']}
+【生年月日】 {$input['bday_year']}年{$input['bday_month']}月{$input['bday_day']}日
+【TEL】 {$input['tel1']}-{$input['tel2']}-{$input['tel3']}
+【FAX】 {$input['fax1']}-{$input['fax2']}-{$input['fax3']}
+【住所】 {$input['postal_code1']}-{$input['postal_code2']}
 　　　 {$input['address_level1']}
-TEL： {$input['tel1']}-{$input['tel2']}-{$input['tel3']}
-FAX： {$input['fax1']}-{$input['fax2']}-{$input['fax3']}
-メールアドレス： {$input['email']}
-ご質問など： {$input['other_content']}
----
+【メールアドレス】 {$input['email']}
+【ご質問など】 {$input['other_content']}
+----------------------------------------------------------------
+このメールは国土技建株式会社の採用お問い合わせフォームから送信されました。
 
-このメールは 国土技建株式会社のお問い合わせフォームから送信されました。
 
 EOM;
 }
