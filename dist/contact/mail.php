@@ -15,9 +15,9 @@ $form = $_SESSION['post'];
 
 /*******************************************************/
 /* 問合せ処理メールアドレス */
-define('INQUIRY_EMAIL_ADMIN', 'dev@cotolog.jp'); // ADMIN
-define('INQUIRY_EMAIL_FROM', 'noreply@kokugi.jp'); // 送り主
-define('INQUIRY_EMAIL_RETURN', 'info@kokugi.jp'); // Return-Path
+define('INQUIRY_EMAIL_ADMIN', 'saiyo@kokugi.jp'); // ADMIN
+define('INQUIRY_EMAIL_FROM', 'saiyo@kokugi.jp'); // 送り主
+define('INQUIRY_EMAIL_RETURN', 'saiyo@kokugi.jp'); // Return-Path
 /*******************************************************/
 
 if ($_SESSION['res']['isSuccess'] === true) {
